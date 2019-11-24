@@ -103,7 +103,7 @@ function initLevel(num) {
 function levelTick() {
 	game.currentLevel.levelTime += 50
 	var thislvl = levelEnemies['lvl'+game.currentLevel.levelNum]
-	for(i=1;i<=thislvl.totalTypes;i++) {
+	for(i=1;i<=thislvl.totaltypes;i++) {
 		var currentEnemy = thislvl['type'+i]
 		if(currentEnemy.spawninfo === 'single' && game.currentLevel.levelTime === currentEnemy.timeinfo[0]) {
 			spawnEnemy(currentEnemy.id)
@@ -149,9 +149,9 @@ function spawnEnemy(id) {
 	enemy.style.left = (screen.availWidth-levelEnemies['lvl'+game.currentLevel.levelNum].width)/2 + 'px'
 	enemy.style.top = screen.availHeight/2 + 50 - enemyStats['id'+id].height+'px'
 	enemy.style.display = 'inline-block'
-	currentLevel.enemyids[i-1] = id
-	currentLevel.enemyhealths[i-1] = enemyStats['id' + id].health
-	currentLevel.enemypos[i-1] = levelEnemies['lv' + game.currentLevel.levelNum].width
+	game.currentLevel.enemyids[i-1] = id
+	game.currentLevel.enemyhealths[i-1] = enemyStats['id' + id].health
+	game.currentLevel.enemypos[i-1] = levelEnemies['lv' + game.currentLevel.levelNum].width
 }
 function init() {
 	if(localStorage.getItem('adventure')!=null) load(localStorage.getItem('adventure'))

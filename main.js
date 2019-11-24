@@ -1,13 +1,25 @@
 const levelNames = ['The 0th Dimension','Place 1']
 const levelEnemies = [[],[['Dark Fighter A1',1,'single',2000],500,500]]//[[enemy name,strength mag,spawn type, time info],enemy base health,level width]
 const enemyDict = ['Dark Fighter A1']
-const enemyStats = [['Dark Fighter A1',6,60,1,75,1,'normal']]//[enemy name, attack, health, knockbacks, speed, atk speed, type]
+const enemyStats = [['Dark Fighter A1',6,60,1,75,1000,'normal']]//[enemy name, attack, health, knockbacks, speed, atk speed, type]
 const shipDict = ['Fighter F1']
-const shipStats = [['Fighter F1',6,60,1,75,1,'common','none','none']]//[unit name, attack, health, knockbacks, speed, atk speed, rarity, strengths, abilities]
+const shipStats = [['Fighter F1',6,60,1,75,1000,5000,50,'common','none','none']]//[unit name, attack, health, knockbacks, speed, atk speed, recharge time, cost, rarity, strengths, abilities]
 function reset() {
 	var game = {
 		levelsCompleted:0,
 		xp:0,
+		currentLevel: {
+			baseHealth:1000,
+			enemyBaseHealth:1000,
+			money:0,
+			enemyids:[0,0,0,0,0,0,0,0,0,0],
+			enemyhealths:[0,0,0,0,0,0,0,0,0,0],
+			enemypos:[0,0,0,0,0,0,0,0,0,0],
+			shipids:[0,0,0,0,0,0,0,0,0,0],
+			equippedshipids:[0,0,0,0,0],
+			shipcooldowns:[0,0,0,0,0],
+			shiphealths:[0,0,0,0,0,0,0,0,0,0],
+			shippos:[0,0,0,0,0,0,0,0,0,0],
 	}
 	return game
 }

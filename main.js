@@ -15,10 +15,10 @@ function initLevel(num) {
 	var base = document.getElementById('base')
 	var enemybase = document.getElementById('enemybase')
 	base.style.top = screen.availHeight/2-50 + 'px'
-	base.style.left = (screen.availWidth+levelEnemies[num][-1])/2 + 'px'
+	base.style.left = (screen.availWidth+levelEnemies[num][levelEnemies[num].length-1])/2 + 'px'
 	base.style.display = 'inline-block'
 	enemybase.style.top = base.style.top
-	enemybase.style.left = (screen.availWidth+levelEnemies[num][-1])/2 + 'px'
+	enemybase.style.left = (screen.availWidth+levelEnemies[num][levelEnemies[num].length-1])/2 + 'px'
 	enemybase.style.display = 'inline-block'
 	for(i=1;i<levelNames.length;i++) document.getElementById('place'+i).style.display = 'none'
 }

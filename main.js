@@ -117,7 +117,7 @@ function levelTick() {
 	}
 	for(i=0;i<10;i++) {
 		var currentlvl = game.currentLevel
-		if(game.currentlvl.enemyids[i] != 0) {
+		if(currentlvl.enemyids[i] != 0) {
 			var whichType = currentlvl.enemyids[i]
 			var currentEnemy = thislvl['type' + whichType]
 			var id = currentEnemy.id

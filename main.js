@@ -20,7 +20,7 @@ function initLevel(num) {
 	enemybase.style.top = base.style.top
 	enemybase.style.left = (screen.availWidth+levelEnemies[num][-1])/2 + 'px'
 	enemybase.style.display = 'inline-block'
-	for(i=1,i<levelNames.length;i++) document.getElementById('place'+i).style.display = 'none'
+	for(i=1;i<levelNames.length;i++) document.getElementById('place'+i).style.display = 'none'
 }
 function init() {
 	if(localStorage.getItem('adventure')!=null) load(localStorage.getItem('adventure'))

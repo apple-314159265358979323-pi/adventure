@@ -103,7 +103,7 @@ function initLevel(num) {
 function levelTick() {
 	game.currentLevel.levelTime += 50
 	var thislvl = levelEnemies['lvl'+game.currentLevel.levelNum]
-	for(i=1,i<=thislvl.totalTypes,i++) {
+	for(i=1;i<=thislvl.totalTypes;i++) {
 		var currentEnemy = thislvl['type'+i]
 		if(currentEnemy.spawninfo === 'single' && game.currentLevel.levelTime === currentEnemy.timeinfo[0]) {
 			spawnEnemy(currentEnemy.id)
@@ -115,7 +115,7 @@ function levelTick() {
 			spawnEnemy(currentEnemy.id)
 		}
 	}
-	for(i=0;i<10,i++) {
+	for(i=0;i<10;i++) {
 		var currentlvl = game.currentLevel
 		if(game.currentlvl.enemyids[i] != 0) {
 			var whichType = currentlvl.enemyids[i]

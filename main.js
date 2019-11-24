@@ -85,7 +85,7 @@ function initLevel(num) {
 	enemybasehealth.style.top = basehealth.style.top
 	enemybasehealth.style.left = enemybase.style.left
 	enemybasehealth.style.display = 'inline-block'
-	update('enemybasehealth',game.currentLevel.enemyBaseHealth + '/' + game['lvl'+num].enemybasehealth)
+	update('enemybasehealth',game.currentLevel.enemyBaseHealth + '/' + levelEnemies['lvl'+num].enemybasehealth)
 	for(i=1;i<levelNames.length;i++) document.getElementById('place'+i).style.display = 'none'
 }
 function init() {

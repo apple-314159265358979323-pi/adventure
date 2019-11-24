@@ -60,6 +60,7 @@ function reset() {
 			shipcooldowns:[0,0,0,0,0],
 			shiphealths:[0,0,0,0,0,0,0,0,0,0],
 			shippos:[0,0,0,0,0,0,0,0,0,0],
+		}
 	}
 	return game
 }
